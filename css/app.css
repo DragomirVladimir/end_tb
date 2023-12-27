@@ -421,13 +421,7 @@ button {
   background-color: #017ee2;
   z-index: -1;
 }
-.hero__bg img {
-  height: 100%;
-  max-width: none;
-  width: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
+
 .hero__bg picture {
   display: block;
   height: 100%;
