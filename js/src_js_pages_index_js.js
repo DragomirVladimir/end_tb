@@ -21,41 +21,31 @@ var index = function index() {
   var body = document.querySelector('body');
   var navigation = document.querySelector('.nav');
   var logo = navigation.querySelector('.logo');
-
-  // const navLinks = document.querySelectorAll('.nav__menu_link');
-
   var menuList = navigation.querySelector('.nav__menu_list');
-  var burgerBtnOpen = navigation.querySelector('.js-burger-btn--open');
-  var burgerBtnClose = navigation.querySelector('.js-burger-btn--close');
+  var burgerBtn = navigation.querySelector('.js-burger-btn');
   function activationMenu() {
     navigation.classList.add('nav--active');
+    burgerBtn.classList.add('burger_btn--active');
+    burgerBtn.innerHTML = 'close';
     body.classList.add('disable_scrloll');
   }
   function deactivationMenu() {
     navigation.classList.remove('nav--active');
+    burgerBtn.classList.remove('burger_btn--active');
+    burgerBtn.innerHTML = 'menu';
     body.classList.remove('disable_scrloll');
   }
-  burgerBtnOpen.addEventListener('click', function () {
-    activationMenu();
-  });
-  burgerBtnClose.addEventListener('click', function () {
-    deactivationMenu();
+  burgerBtn.addEventListener('click', function () {
+    if (burgerBtn.classList.contains('burger_btn--active')) {
+      deactivationMenu();
+    } else {
+      activationMenu();
+    }
   });
   logo.addEventListener('click', function () {
     console.log('logo');
     deactivationMenu();
   });
-
-  // navLinks.forEach((el) => {
-
-  //   el.addEventListener('click', () => {
-
-  //     deactivationMenu();
-
-  //   })
-
-  // });
-
   menuList.addEventListener('click', function (event) {
     if (_toConsumableArray(event.target.classList).some(function (item) {
       console.log('hello');
