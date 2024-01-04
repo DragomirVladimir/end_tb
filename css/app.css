@@ -219,6 +219,7 @@ body {
 
 button {
   cursor: pointer;
+  font: inherit;
 }
 
 .preloader {
@@ -426,7 +427,7 @@ button {
   color: #017ee2;
   font-size: 0.68rem;
   font-weight: 900;
-  letter-spacing: -0.02rem;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   transition: color 0.2s ease;
   z-index: 100;
